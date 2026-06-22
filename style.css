@@ -3099,3 +3099,50 @@ h1 {
     padding-right: 34px !important;
   }
 }
+/* =========================
+   Luxury Section Title Accent
+   見出し下に細い装飾ラインを追加
+========================= */
+
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 24px;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 56px;
+  height: 1px;
+  background-color: #8f656a;
+  transform: translateX(-50%);
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 18px;
+  height: 1px;
+  background-color: #d7bcc1;
+  transform: translateX(-50%);
+}
+
+/* スマホでは少し控えめに */
+@media (max-width: 768px) {
+  .section-title h2 {
+    padding-bottom: 20px;
+  }
+
+  .section-title h2::after {
+    width: 44px;
+  }
+
+  .section-title h2::before {
+    width: 14px;
+  }
+}
